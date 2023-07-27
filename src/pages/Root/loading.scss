@@ -1,0 +1,124 @@
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+}
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9999px 0 0 -5px;
+  animation: dot-pulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+.dot-pulse::before, .dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px;
+  animation: dot-pulse-before 1.5s infinite linear;
+  animation-delay: 0s;
+}
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px;
+  animation: dot-pulse-after 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dot-pulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+}
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+}
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+}
+
+// .dot-overtaking {
+//   position: relative;
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 6px;
+//   background-color: transparent;
+//   color: hsl(0, 0%, 0%);
+//   margin: -1px 0;
+//   box-shadow: 0 -20px 0 0;
+//   filter: blur(2px);
+//   animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+// }
+// .dot-overtaking::before, .dot-overtaking::after {
+//   content: "";
+//   display: inline-block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 6px;
+//   background-color: transparent;
+//   color: hsl(0deg, 100%, 0%);
+//   box-shadow: 0 -20px 0 0;
+//   filter: blur(2px);
+// }
+// .dot-overtaking::before {
+//   animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+//   animation-delay: 0.3s;
+// }
+// .dot-overtaking::after {
+//   animation: dot-overtaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+//   animation-delay: 0.6s;
+// }
+
+// @keyframes dot-overtaking {
+//   0% {
+//     transform: rotateZ(0deg);
+//   }
+//   100% {
+//     transform: rotateZ(360deg);
+//   }
+// }
