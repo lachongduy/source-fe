@@ -93,7 +93,7 @@ const ProductList = (props) => {
                       </span>
                     )}
                   </div>
-                  <div>
+                  {/* <div>
                     <h5> Màu: {product.colors.length}</h5>
 
                     {product.colors.map((color) => (
@@ -112,7 +112,7 @@ const ProductList = (props) => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
 
                 </div>
 
